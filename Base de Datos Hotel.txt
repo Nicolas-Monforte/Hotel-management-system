@@ -1,0 +1,35 @@
+create database Hotel;
+
+CREATE TABLE pasajeros (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    documento int NOT NULL UNIQUE,
+    telefono long NOT NULL,
+    correoElectronico VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE habitaciones (
+    id bigint PRIMARY KEY AUTO_INCREMENT,
+    numeroHabitacion INT NOT NULL,
+    camasSingle INT NOT NULL,
+    camasDobles INT NOT NULL,
+    precioPorDia double NOT NULL
+);
+
+CREATE TABLE reservas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    fecha_check_in  DATE NOT NULL,
+    fecha_check_out DATE NOT NULL,
+    pasajero_id bigint,
+    senia DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (pasajero_Id) REFERENCES pasajeros(id)ON DELETE CASCADE
+);
+
+CREATE TABLE reserva_habitacion (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    reserva_id INT,
+    habitacion_id bigint,
+    FOREIGN KEY (reserva_Id) REFERENCES reservas(id) ON DELETE CASCADE,
+     FOREIGN KEY (habitacion_Id) REFERENCES habitaciones(id)ON DELETE CASCADE
+);
