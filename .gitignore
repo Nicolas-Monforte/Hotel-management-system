@@ -1,0 +1,30 @@
+# Archivos de compilación
+*.class
+
+# Directorios generados automáticamente
+/bin/
+/build/
+/out/
+
+# Configuración de IDEs (IntelliJ IDEA, Eclipse, NetBeans, VSCode)
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Archivos temporales del sistema
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Archivos específicos de Maven o Gradle
+/.mvn/
+/target/
+/.gradle/
+/build/
+
+# Configuración local
+*.env
