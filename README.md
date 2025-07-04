@@ -31,5 +31,5 @@ El sistema utiliza el patrón **DAO** para interactuar con la base de datos MySQ
 ## Requisitos
 - **Java JDK 21** o superior
 - **MySQL Workbench** (para gestionar la base de datos)
-- Configuración de conexión a la base de datos en el archivo de configuración (como `db.properties` si se usó).
+- Configuración de conexión a la base de datos en el archivo de configuración
 
